@@ -1,0 +1,48 @@
+// Path to assets for use with the file-url function
+// in the govuk frontend toolkit's url-helpers partial
+$path: "/public/images/";
+
+// Import GOV.UK elements from /govuk-modules/, this will import the frontend toolkit and some base styles.
+// Take a look in /govuk-modules/_govuk-elements.scss to see which files are imported.
+@import 'govuk-elements';
+
+// DESIGN PATTERNS
+
+@import 'patterns/check-your-answers';
+@import 'patterns/headers';
+@import 'patterns/product-overview-page';
+@import 'patterns/search-in-header';
+@import 'patterns/tabs';
+@import 'patterns/subnav';
+@import 'patterns/helpers';
+@import 'patterns/roadmap';
+
+.section-header {
+	margin: $gutter 0 $gutter/2 0;
+	color: $grey-1;
+	font-size: em(19);
+	border-bottom: 1px solid $grey-2;
+	padding-bottom: 5px;
+}
+
+.page-header__context {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 24px;
+    line-height: 1.25;
+    color: #6f777b;
+    margin-bottom: em(10);
+    padding-bottom: .167em;
+
+    @media screen and (max-width: 640px) {
+    	font-size: 18px;
+    	line-height: 1.2;
+    }
+}
+
+.list {
+    li {
+        margin-bottom: 10px;
+    }
+}

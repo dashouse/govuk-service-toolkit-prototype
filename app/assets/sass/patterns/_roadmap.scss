@@ -1,0 +1,43 @@
+// Styling ul as roadmaps
+
+.roadmap {
+    
+
+    ul {
+        
+        background-color: $grey-3;
+        padding: $gutter-half;
+        margin-bottom: $gutter;
+        border: 1px solid $grey-2;
+
+        // &.near {
+        //     background-color: $grey-2;
+        // }
+
+        // &.medium {
+        //     background-color: $grey-3;
+        // }
+
+        // &.long {
+        //     background-color: lighten($grey-3, 5%);
+        // }
+
+        h3 {
+            margin: 0 0 $gutter-half 0;
+        }
+
+        li {
+            @include box-sizing(border-box);
+            display: block;
+            width: 100%;
+            background-color: white;
+            padding: $gutter-half;
+            margin-bottom: $gutter-half;
+            border-bottom: 2px solid $grey-2;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

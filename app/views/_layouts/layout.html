@@ -1,0 +1,36 @@
+{% extends "_layouts/govuk_template.html" %}
+
+{% import "includes/macros.html" as macro %}
+
+{% block head %}
+  {% include "includes/head.html" %}
+{% endblock %}
+
+{% block cookie_message %}
+  <p>{{cookieText | safe }}</p>
+{% endblock %}
+
+{% block prototype %}
+	{% include "includes/prototype.html" %}
+{% endblock %}
+
+{% block page_title %}
+  {{ productName }}
+{% endblock %}
+
+{% block header_class %}
+  with-proposition govuk-product
+{% endblock %}
+
+{% block header_logo %}
+  {{ macro.productName(productName, phase) }}
+{% endblock %}
+
+{% block proposition_header %}
+  {{ macro.headerNav(homepage_url, navItems, section) }}
+{% endblock %}
+
+{% block body_end %}
+  {% include "includes/scripts.html" %}
+  <!-- GOV.UK Prototype kit {{releaseVersion}} -->
+{% endblock %}

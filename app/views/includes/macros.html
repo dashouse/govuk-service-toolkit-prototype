@@ -1,0 +1,25 @@
+
+{% macro headerNav(homepage_url, navItems, section) %}
+
+<div class="header-proposition">
+  <div class="content">
+    <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
+    <nav id="proposition-menu">
+      <ul id="proposition-links" class="right-aligned">
+
+        {% for href, title in navItems %}
+          <li><a {% if href == section %}class="active"{% endif %} href="{% if not 'http' in href %}{{ homepage_url }}{% endif %}{{ href }}">{{ title }}</a></li>
+        {% endfor %}
+
+      </ul>
+    </nav>
+  </div>
+</div>
+
+{% endmacro %}
+
+{% macro productName(name, phase) %}
+
+GOV.UK&nbsp;&nbsp;{% if name %}<span class="product-name">{{ name }}{% endif %}</span>{% if phase %}<span class="phase-banner"><strong class="phase-tag">{{ phase }}</strong></span>{% endif %}
+
+{% endmacro %}
